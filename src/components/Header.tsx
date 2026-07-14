@@ -65,6 +65,21 @@ export function Header() {
             id="nav"
             aria-label={t("a_menu")}
           >
+            <button
+              className="nav__close"
+              aria-label={t("a_close")}
+              onClick={closeMenu}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M6 6l12 12M18 6L6 18"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
             <ul className="nav__list">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
