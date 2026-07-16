@@ -1878,6 +1878,9 @@ input:focus-visible {
     align-items: center;
     text-align: center;
   }
+  .home-about__body .tcard__link {
+    align-self: center;
+  }
   .cat-grid {
     grid-template-columns: repeat(2, 1fr);
   }
