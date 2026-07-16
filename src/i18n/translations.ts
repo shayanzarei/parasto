@@ -4,73 +4,109 @@ export type Dict = Record<string, string>;
 
 export const translations: Record<Lang, Dict> = {
   nl: {
-    skip: "Ga naar inhoud",
-
     address: "Lodewijk Pincoffsweg 386, 3071 AS Rotterdam",
 
-    nav_treatments: "Behandelingen",
+    nav_home: "Home",
+    nav_services: "Diensten",
     nav_about: "Over ons",
-    nav_pricing: "Prijslijst",
     nav_contact: "Contact",
     book: "Afspraak maken",
 
-    tagline: "FACE | HAIR | BODY | SKIN",
+    tagline: "SKIN | INJECTABLES | PMU | LASHES",
 
-    hero_title: "Beauty kliniek in Rotterdam",
+    hero_title: "Medische huidkliniek in Rotterdam",
+    hero_subtitle:
+      "Pari Skin Clinic — facials, microneedling, skin boosters, botox, fillers en PMU op afspraak in Rotterdam.",
+    hero_image_alt:
+      "Interieur van Pari Skin Clinic, medische huidkliniek in Rotterdam",
 
     about_p1:
-      "Welkom bij Parasto Beauty Salon, waar schoonheid perfectie ontmoet! Wij geloven dat iedereen het verdient om er mooi uit te zien en zich fantastisch te voelen. Daarom streven we naar het bieden van hoogwaardige haar- en make-updiensten aan onze klanten.",
-    about_p2:
-      "Ons team van ervaren make-upartiesten en haarstylisten is gepassioneerd over wat ze doen en trots op de uitzonderlijke resultaten die ze behalen, waardoor onze klanten zich prachtig en vol zelfvertrouwen voelen.",
+      "Bij Pari Skin Clinic geloven wij dat echte schoonheid begint met vertrouwen, gezondheid en een persoonlijke benadering.",
+    read_more: "Lees onze filosofie",
+
+    home_about_title: "Medische huidzorg met persoonlijke aandacht",
 
     unique_heading: "Wat ons uniek maakt",
-    u1_title: "Ervaren professionals",
+    u1_title: "Medische expertise",
     u1_text:
-      "Onze make-up artiesten en haarstylisten zijn de meest ervaren professionals in de branche. U kunt erop vertrouwen dat u bij Parasto kwalitatieve diensten en prachtige resultaten krijgt.",
+      "Wij combineren geavanceerde technologie, medische expertise en bewezen behandelmethoden voor duurzame en natuurlijke resultaten.",
     u2_title: "Persoonlijke aandacht",
     u2_text:
-      "Bij ons staat persoonlijke aandacht centraal. Wij luisteren naar uw behoeften en geven u een persoonlijke behandeling om ervoor te zorgen dat u straalt en uw verwachtingen overtreft.",
-    u3_title: "Innovatieve technologie",
+      "Iedere cliënt is uniek. Wij luisteren, analyseren uw huid en stellen een persoonlijk behandelplan op dat bij u past.",
+    u3_title: "Natuurlijke esthetiek",
     u3_text:
-      "Wij zijn altijd toegewijd aan innovatie en gebruiken geavanceerde technologieën en producten om u de beste resultaten te geven.",
+      "Onze filosofie is gebaseerd op het versterken van uw natuurlijke uitstraling, zonder overbehandeling.",
 
-    treat_heading: "Onze behandelingen",
-    t1_title: "Laserontharing behandelingen",
-    t1_text:
-      "Naast onze make-up en haarstyling diensten, bieden wij ook laserontharing behandelingen in onze beauty kliniek. Onze state-of-the-art technologie zorgt ervoor dat u veilige en effectieve behandelingen ontvangt die uw huid glad en haarvrij maken.",
-    t1_link: "Laserontharen",
-    t2_title: "Aquaglo + Hydrafacial",
-    t2_text:
-      "Natuurlijke, niet-invasieve huidverjonging voor intense hydratatie en een stralende teint. Vermindert hyperpigmentatie, stimuleert celdeling en biedt diepe reiniging. Krachtige resultaten voor een frisse, glowy look zonder invasieve ingrepen.",
-    t2_link: "Aquaglo + Hydrafacial",
-    t3_title: "Visagie & bruidsstyling",
-    t3_text:
-      "Van een natuurlijke dagelijkse look tot een volledige bruidsstyling — onze visagisten creëren een tijdloze uitstraling die perfect bij u past. Ideaal voor bruiloften, fotoshoots en speciale gelegenheden.",
-    t3_link: "Visagie boeken",
+    services_heading: "Onze diensten",
+    services_intro:
+      "Van facials en peelings tot microneedling, skin boosters, PMU, botox en fillers — ontdek ons volledige aanbod.",
+    services_count_label: "behandelingen",
+    view_services: "Bekijk",
+    all_services_btn: "Alle diensten & prijzen",
+
+    gallery_heading: "Resultaten",
+    gallery_intro:
+      "Echte behandelresultaten van Pari Skin Clinic. Individuele resultaten kunnen variëren — tijdens intake bespreken we wat voor u haalbaar is.",
+    gallery_nav_label: "Resultaat",
+    gallery_cta: "Meer resultaten op Instagram",
+
+    home_cta_title: "Klaar om te beginnen?",
+    home_cta_text:
+      "Plan een intake of behandeling bij Pari Skin Clinic in Rotterdam. Wij begeleiden u persoonlijk van advies tot nazorg.",
+
+    services_page_title: "Diensten & prijzen",
+    services_page_sub: "Volledig overzicht van al onze behandelingen",
+    services_page_note:
+      "Elke behandeling begint met een persoonlijke huidanalyse. Prijzen zijn indicatief; tijdens intake bespreken we wat het beste bij u past.",
+    services_image_alt:
+      "Behandeling bij Pari Skin Clinic in Rotterdam — medische huidzorg en esthetiek",
+    services_feature_title: "Persoonlijk behandelplan",
+    services_feature_text:
+      "Van facials en peelings tot injectables en PMU: elke behandeling wordt afgestemd op uw huid, doelen en wensen. Wij werken met medische producten en technieken voor natuurlijke, duurzame resultaten.",
+    services_nav_label: "Categorieën",
+    services_learn_more: "Meer informatie",
+    services_book_title: "Klaar voor uw behandeling?",
+    services_book_text:
+      "Plan een intake of behandeling online. Wij begeleiden u persoonlijk van advies tot nazorg.",
+
+    about_page_title: "Onze filosofie",
+    about_image_alt:
+      "Pari Skin Clinic in Rotterdam — medische huidkliniek interieur",
+    about_services_image_alt:
+      "Behandelruimte bij Pari Skin Clinic in Rotterdam",
+    about_founder_label: "Onze oprichter",
+    about_approach_label: "Persoonlijke aanpak",
+    about_vision_label: "Onze visie",
+    about_offerings_title: "Ons aanbod",
+    about_surgery_title: "Plastisch chirurgisch advies",
+
+    contact_page_title: "Contact",
+    contact_page_sub: "Bezoek ons in Rotterdam of maak een afspraak",
+    contact_book_title: "Afspraak maken",
+    contact_book_text:
+      "Neem contact op per e-mail of telefoon. Wij plannen graag een intake of behandeling voor u in.",
+    contact_map_title: "Locatie",
+    contact_map_link: "Route openen in Google Maps",
+    contact_email_label: "E-mail",
+    contact_phone_label: "Telefoon",
+    contact_social_text:
+      "Volg ons op social media voor behandelresultaten, tips en nieuws uit de kliniek.",
+    book_email_subject: "Afspraak aanvraag",
 
     quote:
-      "\u201CDe beste visagist van heel Europa! Ze heeft mij gered op mijn trouwdag. Ik ga binnenkort bij haar langs met een heel mooi cadeau!\u201D",
-
-    gallery_heading: "Visagie",
-    pricing_btn: "Prijslijst",
-
-    news_label: "Schrijf je in voor onze nieuwsbrief",
-    news_ph: "Email",
-    news_btn: "Inschrijven",
-    news_ok: "Bedankt! Je bent ingeschreven.",
-    news_err: "Vul een geldig e-mailadres in.",
+      "\u201CBij Pari voel je je direct op je gemak. Professioneel, eerlijk advies en prachtige resultaten.\u201D",
+    testimonial_heading: "Ervaring van een cliënt",
 
     f_menu: "Menu",
     f_contact: "Contact",
-    f_addr1: "Lodewijk Pincoffsweg 386",
-    f_addr2: "3071 AS Rotterdam",
+    f_hours: "Openingstijden",
+    f_social: "Volg ons",
     f_service: "Klantenservice",
     f_terms: "Algemene Voorwaarden",
     f_privacy: "Privacy Policy",
     f_cookie: "Cookie Verklaring",
-    f_affil: "Aangesloten bij",
-    f_credit: "Webdesign by Parasto Studio",
-    f_copy: "Parasto Beauty Salon | 2026",
+    f_credit: "Pari Skin Clinic",
+    f_copy: "Pari Skin Clinic | 2026",
 
     a_prev: "Vorige",
     a_next: "Volgende",
@@ -80,73 +116,109 @@ export const translations: Record<Lang, Dict> = {
   },
 
   en: {
-    skip: "Skip to content",
-
     address: "Lodewijk Pincoffsweg 386, 3071 AS Rotterdam",
 
-    nav_treatments: "Treatments",
+    nav_home: "Home",
+    nav_services: "Services",
     nav_about: "About",
-    nav_pricing: "Pricing",
     nav_contact: "Contact",
     book: "Book appointment",
 
-    tagline: "FACE | HAIR | BODY | SKIN",
+    tagline: "SKIN | INJECTABLES | PMU | LASHES",
 
-    hero_title: "Beauty clinic in Rotterdam",
+    hero_title: "Medical skin clinic in Rotterdam",
+    hero_subtitle:
+      "Pari Skin Clinic — facials, microneedling, skin boosters, botox, fillers and PMU by appointment in Rotterdam.",
+    hero_image_alt:
+      "Interior of Pari Skin Clinic, medical skin clinic in Rotterdam",
 
     about_p1:
-      "Welcome to Parasto Beauty Salon, where beauty meets perfection! We believe everyone deserves to look beautiful and feel fantastic. That is why we strive to offer premium hair and make-up services to our clients.",
-    about_p2:
-      "Our team of experienced make-up artists and hair stylists is passionate about what they do and proud of the exceptional results they achieve, leaving our clients feeling beautiful and full of confidence.",
+      "At Pari Skin Clinic we believe true beauty begins with confidence, health and a personal approach.",
+    read_more: "Read our philosophy",
+
+    home_about_title: "Medical skin care with personal attention",
 
     unique_heading: "What makes us unique",
-    u1_title: "Experienced professionals",
+    u1_title: "Medical expertise",
     u1_text:
-      "Our make-up artists and hair stylists are the most experienced professionals in the industry. You can trust that at Parasto you receive quality services and stunning results.",
+      "We combine advanced technology, medical expertise and proven treatment methods for sustainable and natural results.",
     u2_title: "Personal attention",
     u2_text:
-      "Personal attention is at the heart of everything we do. We listen to your needs and give you a bespoke treatment to make sure you shine and exceed your expectations.",
-    u3_title: "Innovative technology",
+      "Every client is unique. We listen, analyse your skin and create a personal treatment plan tailored to you.",
+    u3_title: "Natural aesthetics",
     u3_text:
-      "We are always committed to innovation and use advanced technologies and products to give you the very best results.",
+      "Our philosophy is based on enhancing your natural appearance without overtreatment.",
 
-    treat_heading: "Our treatments",
-    t1_title: "Laser hair removal treatments",
-    t1_text:
-      "Alongside our make-up and hair styling services, we also offer laser hair removal treatments in our beauty clinic. Our state-of-the-art technology ensures you receive safe and effective treatments that leave your skin smooth and hair-free.",
-    t1_link: "Laser hair removal",
-    t2_title: "Aquaglo + Hydrafacial",
-    t2_text:
-      "Natural, non-invasive skin rejuvenation for intense hydration and a radiant complexion. Reduces hyperpigmentation, stimulates cell renewal and delivers deep cleansing. Powerful results for a fresh, glowy look without invasive procedures.",
-    t2_link: "Aquaglo + Hydrafacial",
-    t3_title: "Make-up & bridal styling",
-    t3_text:
-      "From a natural everyday look to a complete bridal styling — our make-up artists create a timeless look that suits you perfectly. Ideal for weddings, photoshoots and special occasions.",
-    t3_link: "Book make-up",
+    services_heading: "Our services",
+    services_intro:
+      "From facials and peels to microneedling, skin boosters, PMU, botox and fillers — explore our full range.",
+    services_count_label: "treatments",
+    view_services: "View",
+    all_services_btn: "All services & prices",
+
+    gallery_heading: "Results",
+    gallery_intro:
+      "Real treatment results from Pari Skin Clinic. Individual outcomes may vary — we discuss what is achievable for you during intake.",
+    gallery_nav_label: "Result",
+    gallery_cta: "More results on Instagram",
+
+    home_cta_title: "Ready to get started?",
+    home_cta_text:
+      "Book an intake or treatment at Pari Skin Clinic in Rotterdam. We guide you personally from consultation to aftercare.",
+
+    services_page_title: "Services & pricing",
+    services_page_sub: "Complete overview of all our treatments",
+    services_page_note:
+      "Every treatment starts with a personal skin analysis. Prices are indicative; during intake we discuss what suits you best.",
+    services_image_alt:
+      "Treatment at Pari Skin Clinic in Rotterdam — medical skin care and aesthetics",
+    services_feature_title: "Personal treatment plan",
+    services_feature_text:
+      "From facials and peels to injectables and PMU: every treatment is tailored to your skin, goals and preferences. We use medical products and techniques for natural, lasting results.",
+    services_nav_label: "Categories",
+    services_learn_more: "Learn more",
+    services_book_title: "Ready for your treatment?",
+    services_book_text:
+      "Book an intake or treatment online. We guide you personally from consultation to aftercare.",
+
+    about_page_title: "Our philosophy",
+    about_image_alt:
+      "Pari Skin Clinic in Rotterdam — medical skin clinic interior",
+    about_services_image_alt:
+      "Treatment room at Pari Skin Clinic in Rotterdam",
+    about_founder_label: "Our founder",
+    about_approach_label: "Personal approach",
+    about_vision_label: "Our vision",
+    about_offerings_title: "What we offer",
+    about_surgery_title: "Plastic surgery guidance",
+
+    contact_page_title: "Contact",
+    contact_page_sub: "Visit us in Rotterdam or book an appointment",
+    contact_book_title: "Book an appointment",
+    contact_book_text:
+      "Contact us by email or phone. We are happy to schedule an intake or treatment for you.",
+    contact_map_title: "Location",
+    contact_map_link: "Open directions in Google Maps",
+    contact_email_label: "Email",
+    contact_phone_label: "Phone",
+    contact_social_text:
+      "Follow us on social media for treatment results, tips and news from the clinic.",
+    book_email_subject: "Appointment request",
 
     quote:
-      "\u201CThe best make-up artist in all of Europe! She saved me on my wedding day. I will visit her soon with a very nice gift!\u201D",
-
-    gallery_heading: "Make-up",
-    pricing_btn: "Pricing",
-
-    news_label: "Sign up for our newsletter",
-    news_ph: "Email",
-    news_btn: "Subscribe",
-    news_ok: "Thank you! You are subscribed.",
-    news_err: "Please enter a valid email address.",
+      "\u201CAt Pari you feel at ease immediately. Professional, honest advice and beautiful results.\u201D",
+    testimonial_heading: "Client experience",
 
     f_menu: "Menu",
     f_contact: "Contact",
-    f_addr1: "Lodewijk Pincoffsweg 386",
-    f_addr2: "3071 AS Rotterdam",
+    f_hours: "Opening hours",
+    f_social: "Follow us",
     f_service: "Customer service",
     f_terms: "Terms & Conditions",
     f_privacy: "Privacy Policy",
     f_cookie: "Cookie Statement",
-    f_affil: "Affiliated with",
-    f_credit: "Webdesign by Parasto Studio",
-    f_copy: "Parasto Beauty Salon | 2026",
+    f_credit: "Pari Skin Clinic",
+    f_copy: "Pari Skin Clinic | 2026",
 
     a_prev: "Previous",
     a_next: "Next",

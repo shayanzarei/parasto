@@ -1,18 +1,22 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { BrandMark } from "./BrandMark";
+import { clinic, bookingUrl } from "@/data/clinic";
 
 const NAV_ITEMS = [
-  { href: "#treatments", key: "nav_treatments" },
-  { href: "#about", key: "nav_about" },
-  { href: "#pricing", key: "nav_pricing" },
-  { href: "#contact", key: "nav_contact" },
+  { href: "/", key: "nav_home" },
+  { href: "/services", key: "nav_services" },
+  { href: "/about", key: "nav_about" },
+  { href: "/contact", key: "nav_contact" },
 ];
 
 export function Header() {
   const { t, lang, setLang } = useLanguage();
+  const pathname = usePathname();
   const [stuck, setStuck] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -29,6 +33,10 @@ export function Header() {
   }, [menuOpen]);
 
   useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setMenuOpen(false);
     };
@@ -41,7 +49,7 @@ export function Header() {
   return (
     <>
       <header className={`header${stuck ? " is-stuck" : ""}`} id="header">
-        <div className="wrap header__inner">
+        <div className="wrap header__bar">
           <button
             className="header__burger"
             aria-label={t("a_menu")}
@@ -54,12 +62,42 @@ export function Header() {
             <span />
           </button>
 
-          <a className="brand" href="#top" aria-label="Parasto home">
+          <Link className="brand" href="/" aria-label={`${clinic.name} home`}>
             <BrandMark />
-            <span className="brand__name">PARASTO</span>
+            <span className="brand__name">PARI</span>
             <span className="brand__tag">{t("tagline")}</span>
-          </a>
+          </Link>
 
+          <div className="header__actions">
+            <a
+              href={bookingUrl}
+              className="btn btn--fill header__cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("book")}
+            </a>
+            <div className="lang" role="group" aria-label="Language">
+              <button
+                className={`lang__btn${lang === "nl" ? " is-active" : ""}`}
+                onClick={() => setLang("nl")}
+                aria-pressed={lang === "nl"}
+              >
+                NL
+              </button>
+              <span aria-hidden="true">/</span>
+              <button
+                className={`lang__btn${lang === "en" ? " is-active" : ""}`}
+                onClick={() => setLang("en")}
+                aria-pressed={lang === "en"}
+              >
+                EN
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="wrap nav__shell">
           <nav
             className={`nav${menuOpen ? " is-open" : ""}`}
             id="nav"
@@ -83,43 +121,26 @@ export function Header() {
             <ul className="nav__list">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} onClick={closeMenu}>
+                  <Link
+                    href={item.href}
+                    className={pathname === item.href ? "is-active" : undefined}
+                    onClick={closeMenu}
+                  >
                     {t(item.key)}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             <a
-              href="#contact"
+              href={bookingUrl}
               className="btn btn--fill nav__cta"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={closeMenu}
             >
               {t("book")}
             </a>
           </nav>
-
-          <div className="header__actions">
-            <a href="#contact" className="btn btn--fill header__cta">
-              {t("book")}
-            </a>
-            <div className="lang" role="group" aria-label="Language">
-              <button
-                className={`lang__btn${lang === "nl" ? " is-active" : ""}`}
-                onClick={() => setLang("nl")}
-                aria-pressed={lang === "nl"}
-              >
-                NL
-              </button>
-              <span aria-hidden="true">/</span>
-              <button
-                className={`lang__btn${lang === "en" ? " is-active" : ""}`}
-                onClick={() => setLang("en")}
-                aria-pressed={lang === "en"}
-              >
-                EN
-              </button>
-            </div>
-          </div>
         </div>
       </header>
 
