@@ -12,17 +12,17 @@ export function Unique() {
   const { t } = useLanguage();
 
   return (
-    <section className="unique section section--tinted">
+    <section className="home-pillars section section--tinted" aria-labelledby="pillars-heading">
       <div className="wrap">
-        <h2 className="heading-gold">{t("unique_heading")}</h2>
-        <div className="unique__grid">
+        <h2 id="pillars-heading" className="heading-gold">
+          {t("unique_heading")}
+        </h2>
+        <div className="home-pillars__grid">
           {COLS.map((col) => (
-            <article className="unique__col" key={col.title}>
+            <article className="home-pillar" key={col.title}>
               <span className="knot" aria-hidden="true" />
-              <p className="sub-label">
-                <span>{t(col.title)}</span>
-              </p>
-              <p className="unique__text">{t(col.text)}</p>
+              <h3 className="home-pillar__title">{t(col.title)}</h3>
+              <p className="home-pillar__text">{t(col.text)}</p>
             </article>
           ))}
         </div>

@@ -1,29 +1,35 @@
 import type { Metadata } from "next";
-import { Fraunces, Mulish } from "next/font/google";
+import { Lato, Rubik } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { clinic, siteUrl } from "@/data/clinic";
 import "./globals.css";
 
-// Soft, warm display serif — the "SOFT" axis rounds the letter terminals
-// so headings read gentle rather than sharp.
-const fraunces = Fraunces({
+const lato = Lato({
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
-  variable: "--font-serif",
+  weight: ["100", "300", "400", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-lato",
   display: "swap",
 });
 
-// Humanist, rounded sans for body copy and labels.
-const mulish = Mulish({
+const rubik = Rubik({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-sans",
+  variable: "--font-rubik",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Parasto — Beauty Salon Rotterdam",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${clinic.name} — Medical Skin Clinic Rotterdam`,
+    template: `%s | ${clinic.name}`,
+  },
   description:
-    "Parasto Beauty Salon in Rotterdam — Face, Hair, Body & Skin. Luxe behandelingen, visagie, laserontharing en huidverjonging.",
+    "Pari Skin Clinic in Rotterdam — facials, microneedling, skin boosters, PMU, botox, fillers and plastic surgery consultation. Where medical expertise meets natural beauty.",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -32,8 +38,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl">
-      <body className={`${fraunces.variable} ${mulish.variable}`}>
+    <html
+      lang="nl"
+      className={`${lato.variable} ${rubik.variable}`}
+      suppressHydrationWarning
+    >
+      <body className={lato.className} suppressHydrationWarning>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

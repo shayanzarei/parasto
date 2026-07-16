@@ -1,43 +1,53 @@
-"use client";
+import type { Metadata } from "next";
+import { HomePage } from "@/components/HomePage";
+import { HomeJsonLd } from "@/components/HomeJsonLd";
+import { aboutImage, clinic, heroImage, siteUrl } from "@/data/clinic";
 
-import { useLanguage } from "@/context/LanguageContext";
-import { TopBar } from "@/components/TopBar";
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Unique } from "@/components/Unique";
-import { Treatments } from "@/components/Treatments";
-import { Testimonial } from "@/components/Testimonial";
-import { Carousel } from "@/components/Carousel";
-import { Newsletter } from "@/components/Newsletter";
-import { Footer } from "@/components/Footer";
-import { BackToTop } from "@/components/BackToTop";
+const title = "Medische huidkliniek in Rotterdam — Pari Skin Clinic";
+const description =
+  "Pari Skin Clinic in Rotterdam — facials, microneedling, skin boosters, PMU, botox, fillers en plastisch chirurgisch advies. Medische expertise met natuurlijke resultaten.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: clinic.name,
+    locale: "nl_NL",
+    type: "website",
+    images: [
+      {
+        url: heroImage.path,
+        width: heroImage.width,
+        height: heroImage.height,
+        alt: "Pari Skin Clinic, medische huidkliniek in Rotterdam",
+      },
+      {
+        url: aboutImage.path,
+        width: aboutImage.width,
+        height: aboutImage.height,
+        alt: "Interieur van Pari Skin Clinic in Rotterdam",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [heroImage.path],
+  },
+};
 
 export default function Home() {
-  const { t } = useLanguage();
-
   return (
     <>
-      <a className="skip-link" href="#main">
-        {t("skip")}
-      </a>
-
-      <TopBar />
-      <Header />
-
-      <main id="main">
-        <span id="top" />
-        <Hero />
-        <About />
-        <Unique />
-        <Treatments />
-        <Testimonial />
-        <Carousel />
-        <Newsletter />
-      </main>
-
-      <Footer />
-      <BackToTop />
+      <HomeJsonLd />
+      <HomePage />
     </>
   );
 }

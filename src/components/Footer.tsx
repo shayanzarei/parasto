@@ -1,73 +1,51 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { BrandMark } from "./BrandMark";
+import { clinic, bookingUrl } from "@/data/clinic";
+import { SocialMedia } from "./SocialMedia";
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer">
       <div className="wrap footer__top">
         <BrandMark className="brand__mark--footer" />
-        <p className="serif-name serif-name--light">PARASTO</p>
-        <p className="brand__tag brand__tag--footer">{t("tagline")}</p>
+        <p className="serif-name serif-name--light">PARI</p>
+        <p className="brand__tag brand__tag--footer">{clinic.tagline[lang]}</p>
       </div>
 
       <div className="wrap footer__cols">
         <div className="footer__col">
-          <h3 className="footer__h">{t("f_menu")}</h3>
-          <ul>
-            <li>
-              <a href="#treatments">{t("nav_treatments")}</a>
-            </li>
-            <li>
-              <a href="#about">{t("nav_about")}</a>
-            </li>
-            <li>
-              <a href="#pricing">{t("nav_pricing")}</a>
-            </li>
-            <li>
-              <a href="#contact">{t("book")}</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer__col">
           <h3 className="footer__h">{t("f_contact")}</h3>
           <ul>
-            <li>{t("f_addr1")}</li>
-            <li>{t("f_addr2")}</li>
+            <li>{clinic.address.street}</li>
+            <li>{clinic.address.city}</li>
             <li>
-              <a href="mailto:info@parasto.com">info@parasto.com</a>
+              <a href={`mailto:${clinic.email}`}>{clinic.email}</a>
             </li>
             <li>
-              <a href="tel:+31857800384">085-7800384</a>
+              <a href={`tel:${clinic.phone.replace(/-/g, "")}`}>{clinic.phone}</a>
             </li>
           </ul>
         </div>
 
         <div className="footer__col">
-          <h3 className="footer__h">{t("f_service")}</h3>
+          <h3 className="footer__h">{t("f_hours")}</h3>
           <ul>
-            <li>
-              <a href="#">{t("f_terms")}</a>
-            </li>
-            <li>
-              <a href="#">{t("f_privacy")}</a>
-            </li>
-            <li>
-              <a href="#">{t("f_cookie")}</a>
-            </li>
+            {clinic.hours.map((row) => (
+              <li key={row.days.nl}>
+                {row.days[lang]}: {row.time}
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className="footer__col">
-          <h3 className="footer__h">{t("f_affil")}</h3>
-          <div className="footer__badges">
-            <span className="badge">ANBOS</span>
-            <span className="badge badge--round">SBB</span>
-          </div>
+          <h3 className="footer__h">{t("f_social")}</h3>
+          <SocialMedia variant="footer" />
         </div>
       </div>
 
