@@ -8,6 +8,13 @@ export const socialLinks = {
 
 export const siteUrl = "https://pariskinclinic.nl";
 
+export const logo = {
+  path: "/images/logo.png",
+  width: 646,
+  height: 466,
+  alt: "Pari Skin Clinic — Skin Aesthetics Laser",
+} as const;
+
 export const heroImage = {
   path: "/images/hero.jpg",
   width: 8228,
@@ -18,6 +25,12 @@ export const aboutImage = {
   path: "/images/about.jpg",
   width: 5668,
   height: 7937,
+} as const;
+
+export const homeAboutImage = {
+  path: "/images/home-about.jpg",
+  width: 1024,
+  height: 635,
 } as const;
 
 export const aboutServicesImage = {
@@ -56,8 +69,7 @@ export const clinic = {
     },
   },
   email: "info@pariskinclinic.nl",
-  phone: "085-7800384",
-  phoneAlt: "06-38779853",
+  phone: "06 39551503",
   hours: [
     { days: { nl: "Woensdag & donderdag", en: "Wednesday & Thursday" }, time: "10:00 – 18:00" },
     { days: { nl: "Vrijdag", en: "Friday" }, time: "10:00 – 20:00" },

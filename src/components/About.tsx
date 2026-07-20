@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { aboutImage, clinic } from "@/data/clinic";
+import { clinic, homeAboutImage } from "@/data/clinic";
 import { SmartImage } from "./SmartImage";
 
 export function About() {
@@ -14,7 +14,7 @@ export function About() {
       <div className="wrap home-about__grid">
         <figure className="home-about__media">
           <SmartImage
-            src={aboutImage.path}
+            src={homeAboutImage.path}
             fallbackSeed="pari-home-about"
             alt={t("about_image_alt")}
             sizes="(max-width: 860px) 100vw, 420px"
