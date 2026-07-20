@@ -73,7 +73,7 @@ export function HomeJsonLd() {
           "@type": "Person",
           name: clinic.founder,
         },
-        telephone: [clinic.phone, clinic.phoneAlt],
+        telephone: clinic.phone,
         email: clinic.email,
         address: {
           "@type": "PostalAddress",

@@ -126,8 +126,7 @@ export function ContactContent() {
                   <PhoneIcon />
                   <div className="contact-detail__body">
                     <span className="contact-detail__label">{t("contact_phone_label")}</span>
-                    <a href={`tel:${clinic.phone.replace(/-/g, "")}`}>{clinic.phone}</a>
-                    <a href={`tel:${clinic.phoneAlt.replace(/-/g, "")}`}>{clinic.phoneAlt}</a>
+                    <a href={`tel:${clinic.phone.replace(/[\s-]/g, "")}`}>{clinic.phone}</a>
                   </div>
                 </li>
               </ul>

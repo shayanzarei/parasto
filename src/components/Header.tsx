@@ -63,9 +63,7 @@ export function Header() {
           </button>
 
           <Link className="brand" href="/" aria-label={`${clinic.name} home`}>
-            <BrandMark />
-            <span className="brand__name">PARI</span>
-            <span className="brand__tag">{t("tagline")}</span>
+            <BrandMark decorative />
           </Link>
 
           <div className="header__actions">

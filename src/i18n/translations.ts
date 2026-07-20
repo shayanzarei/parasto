@@ -105,8 +105,6 @@ export const translations: Record<Lang, Dict> = {
     f_terms: "Algemene Voorwaarden",
     f_privacy: "Privacy Policy",
     f_cookie: "Cookie Verklaring",
-    f_credit: "Pari Skin Clinic",
-    f_copy: "Pari Skin Clinic | 2026",
 
     a_prev: "Vorige",
     a_next: "Volgende",
@@ -217,8 +215,6 @@ export const translations: Record<Lang, Dict> = {
     f_terms: "Terms & Conditions",
     f_privacy: "Privacy Policy",
     f_cookie: "Cookie Statement",
-    f_credit: "Pari Skin Clinic",
-    f_copy: "Pari Skin Clinic | 2026",
 
     a_prev: "Previous",
     a_next: "Next",

@@ -182,14 +182,15 @@ input:focus-visible {
 
 /* ---------- brand mark ---------- */
 .brand__mark {
-  color: var(--gold);
-  width: 40px;
-  height: 40px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  height: 52px;
 }
-.brand__mark svg {
-  width: 100%;
+.brand__mark img {
+  width: auto;
   height: 100%;
+  display: block;
 }
 
 /* ---------- 1. top bar ---------- */
@@ -245,10 +246,8 @@ input:focus-visible {
 .brand {
   grid-column: 2;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  color: var(--charcoal);
-  text-align: center;
+  justify-content: center;
 }
 .brand__name {
   font-size: 27px;
@@ -941,16 +940,13 @@ input:focus-visible {
   align-items: center;
 }
 .footer .brand__mark--footer {
-  width: 52px;
-  height: 52px;
-  color: #fff;
-  margin-bottom: 12px;
+  height: 88px;
+  max-width: 100%;
+  filter: brightness(0) invert(1);
 }
-.serif-name--light {
-  color: #fff;
-}
-.brand__tag--footer {
-  color: rgba(255, 255, 255, 0.7);
+.footer .brand__mark--footer img {
+  max-width: 100%;
+  object-fit: contain;
 }
 .footer__cols {
   display: grid;
@@ -1014,11 +1010,17 @@ input:focus-visible {
 }
 .footer__bottom-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   min-height: 44px;
   color: rgba(255, 255, 255, 0.9);
   gap: 12px;
+}
+
+.footer__bottom-inner a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ---------- back to top ---------- */
@@ -1898,7 +1900,8 @@ input:focus-visible {
   }
   .topbar__inner {
     justify-content: center;
-    min-height: 32px;
+    min-height: 38px;
+    padding: 8px 0;
   }
   .header__burger {
     display: flex;
@@ -1906,36 +1909,28 @@ input:focus-visible {
     justify-content: center;
     width: 44px;
     height: 44px;
-    margin-left: -8px;
   }
   .header {
     border-bottom: 1px solid var(--hairline);
   }
   .header__bar {
     grid-template-columns: 44px 1fr 44px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    gap: 8px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    gap: 12px;
   }
   .brand {
-    flex-direction: row;
-    gap: 10px;
     min-width: 0;
   }
   .brand__mark {
-    width: 30px;
-    height: 30px;
+    height: 40px;
     flex-shrink: 0;
   }
-  .brand__name {
-    font-size: 20px;
-    letter-spacing: 0.24em;
-    margin-top: 0;
-    padding-left: 0.24em;
-    white-space: nowrap;
+  .footer__top {
+    padding: 52px 20px 36px;
   }
-  .brand__tag {
-    display: none;
+  .footer .brand__mark--footer {
+    height: 76px;
   }
   .header__actions {
     grid-column: 3;
@@ -2170,7 +2165,20 @@ input:focus-visible {
 
 @media (max-width: 480px) {
   .wrap {
-    padding: 0 18px;
+    padding: 0 22px;
+  }
+  .header__bar {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .topbar__inner {
+    padding: 10px 0;
+  }
+  .footer__top {
+    padding: 48px 24px 32px;
+  }
+  .footer .brand__mark--footer {
+    height: 68px;
   }
   .topbar__group {
     gap: 14px;

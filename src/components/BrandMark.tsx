@@ -1,15 +1,22 @@
-export function BrandMark({ className }: { className?: string }) {
+import Image from "next/image";
+import { logo } from "@/data/clinic";
+
+type BrandMarkProps = {
+  className?: string;
+  decorative?: boolean;
+};
+
+export function BrandMark({ className, decorative = true }: BrandMarkProps) {
   return (
-    <span className={`brand__mark ${className ?? ""}`} aria-hidden="true">
-      <svg viewBox="0 0 64 64">
-        <g fill="none" stroke="currentColor" strokeWidth="1.1">
-          <circle cx="32" cy="32" r="20" />
-          <circle cx="32" cy="32" r="6" />
-          <g strokeWidth="0.8">
-            <path d="M32 12v8M32 44v8M12 32h8M44 32h8M18 18l6 6M40 40l6 6M46 18l-6 6M24 40l-6 6" />
-          </g>
-        </g>
-      </svg>
+    <span className={`brand__mark ${className ?? ""}`.trim()}>
+      <Image
+        src={logo.path}
+        alt={decorative ? "" : logo.alt}
+        width={logo.width}
+        height={logo.height}
+        priority
+        unoptimized
+      />
     </span>
   );
 }

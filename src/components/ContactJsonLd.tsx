@@ -44,7 +44,7 @@ export function ContactJsonLd() {
     image: [`${siteUrl}${heroImage.path}`],
     description:
       "Contact Pari Skin Clinic in Rotterdam. Book an appointment for medical skin treatments, injectables and PMU.",
-    telephone: [clinic.phone, clinic.phoneAlt],
+    telephone: clinic.phone,
     email: clinic.email,
     address: {
       "@type": "PostalAddress",
