@@ -185,7 +185,7 @@ input:focus-visible {
   display: inline-flex;
   align-items: center;
   line-height: 0;
-  height: 52px;
+  height: 76px;
 }
 .brand__mark img {
   width: auto;
@@ -491,6 +491,20 @@ input:focus-visible {
   font-size: 15px;
   line-height: 1.75;
   color: var(--text-body);
+}
+.home-pillar__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  color: var(--gold);
+}
+.home-pillar__icon {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 .knot--light {
   background: rgba(255, 255, 255, 0.85);
@@ -1923,7 +1937,7 @@ input:focus-visible {
     min-width: 0;
   }
   .brand__mark {
-    height: 40px;
+    height: 56px;
     flex-shrink: 0;
   }
   .footer__top {
