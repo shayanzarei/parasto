@@ -216,7 +216,7 @@ export const serviceCategories: ServiceCategory[] = [
     items: [
       { name: { nl: "Botox 1 zone Dysport", en: "Botox 1 zone Dysport" }, duration: "15 min", price: 150 },
       { name: { nl: "Botox 2 zones Dysport", en: "Botox 2 zones Dysport" }, duration: "20 min", price: 300 },
-      { name: { nl: "Botox 3 zones Dysport", en: "Botox 3 zones Dysport" }, duration: "30 min", price: 420 },
+      { name: { nl: "Botox 3 zones Dysport", en: "Botox 3 zones Dysport" }, duration: "30 min", price: 440 },
       { name: { nl: "Botox Bunny lines / Gummy smile / Sinaasappelkin", en: "Botox Bunny lines / Gummy smile / Orange chin" }, duration: "30 min", price: 150 },
       { name: { nl: "Botox Knarstanden / Migraine / Overmatig zweten", en: "Botox Grinding / Migraine / Excessive sweating" }, duration: "30 min", price: 300 },
       { name: { nl: "Korean Botox Lifting", en: "Korean Botox Lifting" }, duration: "15 min", price: 610 },

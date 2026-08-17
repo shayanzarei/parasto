@@ -1,5 +1,5 @@
 export const bookingUrl =
-  "https://www.picktime.com/008ee1ac-3c06-42a0-b839-a838d04c6e59";
+  "https://pari-skin-clinic.salonized.com/widget_bookings/new";
 
 export const socialLinks = {
   instagram: "https://www.instagram.com/pari_skin_clinic",
