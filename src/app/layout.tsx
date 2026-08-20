@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lato, Rubik } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { clinic, siteUrl } from "@/data/clinic";
 import "./globals.css";
@@ -45,6 +46,7 @@ export default function RootLayout({
     >
       <body className={lato.className} suppressHydrationWarning>
         <LanguageProvider>{children}</LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
