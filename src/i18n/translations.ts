@@ -101,8 +101,9 @@ export const translations: Record<Lang, Dict> = {
     f_contact: "Contact",
     f_hours: "Openingstijden",
     f_social: "Volg ons",
-    f_service: "Klantenservice",
-    f_terms: "Algemene Voorwaarden",
+    f_service: "Informatie",
+    f_terms: "Algemene Voorwaarden & Huisregels",
+    f_aftercare: "Nazorg Botox & Fillers",
     f_privacy: "Privacy Policy",
     f_cookie: "Cookie Verklaring",
 
@@ -211,8 +212,9 @@ export const translations: Record<Lang, Dict> = {
     f_contact: "Contact",
     f_hours: "Opening hours",
     f_social: "Follow us",
-    f_service: "Customer service",
-    f_terms: "Terms & Conditions",
+    f_service: "Information",
+    f_terms: "Terms & Conditions and House Rules",
+    f_aftercare: "Aftercare Botox & Fillers",
     f_privacy: "Privacy Policy",
     f_cookie: "Cookie Statement",
 

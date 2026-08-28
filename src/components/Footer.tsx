@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { clinic } from "@/data/clinic";
 import { BrandMark } from "./BrandMark";
@@ -37,6 +38,18 @@ export function Footer() {
                 {row.days[lang]}: {row.time}
               </li>
             ))}
+          </ul>
+        </div>
+
+        <div className="footer__col">
+          <h3 className="footer__h">{t("f_service")}</h3>
+          <ul>
+            <li>
+              <Link href="/terms">{t("f_terms")}</Link>
+            </li>
+            <li>
+              <Link href="/aftercare">{t("f_aftercare")}</Link>
+            </li>
           </ul>
         </div>
 
